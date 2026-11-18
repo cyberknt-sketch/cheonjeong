@@ -183,6 +183,17 @@ h2 em{font-style:normal;color:var(--red)}
 .won.kb .char{filter:url(#burnK)}
 .plank.wide .won.kb span{font-size:100px;letter-spacing:0}
 .plank.wide .won.kb .hot{top:calc(50% - .525em)}
+/* 깐마늘 값 팻말 두 장(대 / 중·소)을 나란히 */
+.gprice{display:flex;justify-content:center;align-items:flex-start;gap:28px;margin-top:40px}
+.gprice .plank.wide{flex:1 1 0;min-width:0;margin-top:0;padding:40px 30px 30px}
+.gprice .plank.wide + .plank.wide,.on .gprice .plank.wide + .plank.wide{transform:rotate(1.2deg)}
+.gprice .plank.wide .won{margin:12px 0 0;padding:12px 8px 6px}
+.gprice .plank.wide .won span{font-size:100px}
+.gprice .plank.wide .won .hot{top:12px}
+.gprice .plank.wide .won em.n{filter:url(#thinP)}
+.gprice .plank.wide .won.kb{right:-26px;bottom:-192px;width:216px;height:216px;margin:0;padding:0}
+.gprice .plank.wide .won.kb span{font-size:92px}
+.gprice .plank.wide .won.kb .hot{top:calc(50% - .525em)}
 /* 첫 화면(11/17 사장님 지시): 휴대폰은 손이 닿기 전에는 소리를 못 내므로, 재생 단추를 눌러 소리와 함께 처음부터 보게 한다.
    열자마자 소리가 나는 브라우저(주로 PC)에서는 이 화면 없이 바로 시작한다 */
 #cover{position:absolute;inset:0;z-index:20;display:none;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;
@@ -352,7 +363,7 @@ h2 em{font-style:normal;color:var(--red)}
   </section>
 
   <!-- 4 깐마늘 -->
-  <section class="scene" id="s4" data-hold="6500">
+  <section class="scene" id="s4" data-hold="7000">
     <div class="kick in" style="--d:.1s">깐마늘</div>
     <!-- 통마늘 한 통(대표 그림): 제목 옆 한쪽에. 고추·깨 그림과 같은 풍(면으로 칠한 단순한 그림) -->
     <div class="gl bulb" style="--d:.35s"><svg width="330" height="358" viewBox="0 0 240 260">
@@ -385,7 +396,11 @@ h2 em{font-style:normal;color:var(--red)}
         <div class="gl" style="--d:.85s"><svg width="296" height="220" viewBox="0 0 312 232"><use href="#clove" x="6" y="4" width="200" height="140" transform="rotate(-16 106 74)"/><use href="#clove" x="96" y="78" width="210" height="147" transform="rotate(12 201 151)"/></svg><b>중</b></div>
         <div class="gl" style="--d:1.1s"><svg width="214" height="159" viewBox="0 0 312 232"><use href="#clove" x="6" y="4" width="200" height="140" transform="rotate(-16 106 74)"/><use href="#clove" x="96" y="78" width="210" height="147" transform="rotate(12 201 151)"/></svg><b>소</b></div>
       </div>
-      <div class="plank wide gl" style="--d:1.3s;--pd:2.3s"><b>대 · 중 · 소 모두</b><i class="won"><span class="char"><em class="n">8,000</em><small>원</small></span><span class="hot" aria-hidden="true"><em class="n">8,000</em><small>원</small></span></i><i class="won kb" style="--pd:3.2s"><span class="char">국산</span><span class="hot" aria-hidden="true">국산</span></i></div>
+      <!-- 값이 크기마다 다르다(2026-11-18 사장님: 대는 9,000원) → 팻말 두 장: 대 9,000 / 중·소 8,000 -->
+      <div class="gprice">
+        <div class="plank wide gl" style="--d:1.3s;--pd:2.3s"><b>대</b><i class="won"><span class="char"><em class="n">9,000</em><small>원</small></span><span class="hot" aria-hidden="true"><em class="n">9,000</em><small>원</small></span></i></div>
+        <div class="plank wide gl" style="--d:1.45s;--pd:2.8s"><b>중 · 소</b><i class="won"><span class="char"><em class="n">8,000</em><small>원</small></span><span class="hot" aria-hidden="true"><em class="n">8,000</em><small>원</small></span></i><i class="won kb" style="--pd:3.5s"><span class="char">국산</span><span class="hot" aria-hidden="true">국산</span></i></div>
+      </div>
     </div>
   </section>
 
